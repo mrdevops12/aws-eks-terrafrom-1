@@ -39,3 +39,33 @@ variable "ecr_repository_name" {
   type        = string
   default     = "my-ecr-repo"
 }
+
+variable "msk_cluster_name" {
+  description = "The name of the MSK cluster"
+  type        = string
+  default     = "my-msk-cluster"
+}
+
+variable "number_of_broker_nodes" {
+  description = "The number of broker nodes for the MSK cluster"
+  type        = number
+  default     = 2  # Adjust this value to be a multiple of the number of AZs
+}
+
+variable "glue_database_name" {
+  description = "The name of the Glue database"
+  type        = string
+  default     = "my_glue_database"
+}
+
+variable "glue_table_name" {
+  description = "The name of the Glue table"
+  type        = string
+  default     = "my_glue_table"
+}
+
+variable "glue_s3_location" {
+  description = "The S3 location for the Glue table"
+  type        = string
+  default     = "s3://my-bucket/glue/"
+}

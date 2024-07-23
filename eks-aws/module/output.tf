@@ -25,3 +25,19 @@ output "s3_bucket_names" {
 output "ecr_repository_name" {
   value = module.ecr.ecr_repository_name
 }
+
+output "msk_cluster_arn" {
+  value = module.msk.msk_cluster_arn
+}
+
+output "msk_cluster_bootstrap_brokers" {
+  value = module.msk.msk_cluster_bootstrap_brokers
+}
+
+output "glue_database_name" {
+  value = module.glue.glue_database_name
+}
+
+output "glue_table_name" {
+  value = module.glue.glue_table_name
+}
